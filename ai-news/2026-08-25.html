@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 行业日报 - 2026-08-25</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header .date { font-size: 1.1em; opacity: 0.9; }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+        .stats span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .toc {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .toc h2 { font-size: 1.1em; margin-bottom: 10px; color: #555; }
+        .toc ul { list-style: none; }
+        .toc li { padding: 4px 0; }
+        .toc a { color: #667eea; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .toc-count { color: #999; font-size: 0.85em; }
+        .category-block {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .category-title {
+            font-size: 1.3em;
+            color: #333;
+            border-left: 4px solid #667eea;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-icon { color: #667eea; }
+        .category-count { font-size: 0.7em; color: #999; font-weight: normal; }
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .news-item:last-child { border-bottom: none; }
+        .news-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .news-title { font-size: 1.05em; margin-bottom: 6px; }
+        .news-index {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            font-size: 0.7em;
+            width: 20px; height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 6px;
+            font-weight: bold;
+        }
+        .news-title a { color: #333; text-decoration: none; }
+        .news-title a:hover { color: #667eea; }
+        .news-summary { font-size: 0.9em; color: #666; margin: 6px 0; }
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8em;
+            color: #999;
+        }
+        .news-link { color: #667eea; text-decoration: none; }
+        .stars { color: #f5a623; font-size: 0.85em; letter-spacing: 2px; }
+        .importance-3 .news-title a { font-weight: bold; }
+        .importance-3 { border-left: 3px solid #f5a623; padding-left: 12px; margin-left: -15px; }
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 0.8em;
+            padding: 20px 0;
+        }
+        .footer a { color: #667eea; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>AI 行业日报</h1>
+        <div class="date">2026-08-25</div>
+        <div class="stats">
+            <span>共 5 个分类</span>
+            <span>累计 19 条资讯</span>
+        </div>
+    </div>
+
+    <div class="toc">
+        <h2>目录</h2>
+        <ul>
+            <li><a href="#cat-0">大模型与基础技术</a> <span class="toc-count">(5)</span></li><li><a href="#cat-1">AI Agent 与应用</a> <span class="toc-count">(4)</span></li><li><a href="#cat-2">产业动态与投融资</a> <span class="toc-count">(4)</span></li><li><a href="#cat-3">政策与监管</a> <span class="toc-count">(3)</span></li><li><a href="#cat-4">运营商AI动态</a> <span class="toc-count">(3)</span></li>
+        </ul>
+    </div>
+
+    
+        <section class="category-block" id="cat-0">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                大模型与基础技术
+                <span class="category-count">(5 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://blog.csdn.net/sean9169/article/details/164043818" target="_blank" rel="noopener">微软 AgentLightning v1.0 正式发布：零代码改造的 Agent 强化学习训练框架</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">微软开源 Agent Lightning（已获 1.76 万 Star）发布 v1.0 正式版，代码精简至约 3500 行，核心能力是用部署时的真实 Agent Harness 做强化学习训练，让工具、上下文、控制流在训练中真实参与。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: CSDN AI日报</span>
+                    <a href="https://blog.csdn.net/sean9169/article/details/164043818" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://blog.csdn.net/mdwsmg/article/details/163907007" target="_blank" rel="noopener">OpenAI 暂停下一代模型强化学习训练两周，因触及关键级网络安全能力</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">OpenAI 公开承认为升级安全、监控和对齐体系，暂停最新一代模型（代号 Astra）的 RL 训练两周，Altman 称暂停是为了让对齐工作跟上模型能力跃升速度。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: CSDN 技术动态日报</span>
+                    <a href="https://blog.csdn.net/mdwsmg/article/details/163907007" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="https://blog.csdn.net/2301_79239314/article/details/163939355" target="_blank" rel="noopener">DeepSeek V4 系列告别白菜价：正式引入峰谷定价</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">DeepSeek 公告 V4 系列引入峰谷定价（Peak/Off-peak Pricing），此前以 1 元/2 元横扫市场的 4-Flash 价格机制生变，开发者圈讨论热烈。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: CSDN 大模型性价比榜</span>
+                    <a href="https://blog.csdn.net/2301_79239314/article/details/163939355" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">4</span>
+                        <a href="https://mrzhong.com/?p=427" target="_blank" rel="noopener">面壁智能发布 MathForm：面向 Lean 4 的数学自动形式化开源方案</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">面壁智能 OpenBMB 推出 MathForm，包含 367K+ 已验证示例的 FormalVerse 数据集与配套模型，一致性检查达 60.32%，优于 FineL 等方案。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: AI 圈动态精选</span>
+                    <a href="https://mrzhong.com/?p=427" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">5</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1874388086715396367" target="_blank" rel="noopener">生数科技发布通用世界模型五级发展路线</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">2026 世界机器人大会上，生数科技朱军发表主旨演讲，系统阐述通用世界模型的五级发展路线，提出从大模型视角构建服务型世界模型。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1874388086715396367" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-1">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                AI Agent 与应用
+                <span class="category-count">(4 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://m.163.com/dy/article/L51R242F0534A4SC.html" target="_blank" rel="noopener">字节豆包将推出独立办公 App，正面对标腾讯 Workbuddy</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">豆包最快下周发布独立办公 App，将「工作任务」功能独立出来直接对标腾讯 Workbuddy，网页端已可见「新工作任务」与「新对话」并排布局，AI 办公成为独立主战场。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 网易 AI应用周度观察</span>
+                    <a href="https://m.163.com/dy/article/L51R242F0534A4SC.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://xueqiu.com/1125002675/406206510" target="_blank" rel="noopener">国内首个开源智能体操作系统「灵玑OS」发布</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">2026 年 8 月「灵玑OS」发布，系统性回应智能体产业化中「连不上、干不成、管不住、控不稳」四大痛点，标志 AI 智能体产业化元年开启。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 雪球</span>
+                    <a href="https://xueqiu.com/1125002675/406206510" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1874002110918715205" target="_blank" rel="noopener">2026 企业 AI Agent 平台观测榜：小鹅通等厂商加速落地</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">8 月企业 AI Agent 平台观测显示，小鹅通以 AI Agent 为核心完成产品升级，实在智能推出「龙虾」矩阵智能体，AI 落地进入拼真功夫阶段。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1874002110918715205" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">4</span>
+                        <a href="https://m.tech.china.com/hea/articles/20260824/202608241948186.html" target="_blank" rel="noopener">AICon 2026 深圳站收官：AI 落地开始拼真功夫</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">由极客邦科技旗下 InfoQ 主办的 2026 AICon 全球人工智能开发与应用大会深圳站圆满举办，近 1000 位开发者围绕 AI 工程落地、Agent 创新实践等方向深度交流。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 中华网科技</span>
+                    <a href="https://m.tech.china.com/hea/articles/20260824/202608241948186.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-2">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                产业动态与投融资
+                <span class="category-count">(4 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://www.zhihu.com/pin/2075472417120589249" target="_blank" rel="noopener">Hugging Face 寻求出售，估值飙至 130 亿美元</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">AI 开源社区「抱抱脸」正与投行接洽评估收购意向，估值可能达 130 亿美元甚至更高，2023 年其估值仅 45 亿美元，三年不到翻近三倍。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 知乎今日AI新闻</span>
+                    <a href="https://www.zhihu.com/pin/2075472417120589249" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://finance.eastmoney.com/a/202608233850347574.html" target="_blank" rel="noopener">阿里巴巴拟配售 800 亿港元加码全栈 AI 布局</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">阿里巴巴在港股配售新股募资 800 亿港元，款项净额将 100% 投入全栈 AI 业务，覆盖算力基础设施扩容、大模型研发迭代、AI 商业化落地；蔡崇信、吴泳铭同步增持约 1.2 亿港元。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 东方财富网</span>
+                    <a href="https://finance.eastmoney.com/a/202608233850347574.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1874313596072886943" target="_blank" rel="noopener">英伟达二季报来袭：验证 AI 资本开支周期成市场焦点</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">下周大事提醒：英伟达二季报验证 AI 资本开支周期，同时美国 7 月 PCE 数据出炉，特朗普预告与「AI 行业人士」会晤。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 格隆汇</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1874313596072886943" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">4</span>
+                        <a href="https://baike.baidu.com/item/WVLA2.0/67878666" target="_blank" rel="noopener">宇树科技 WVLA2.0 具身智能大模型落地 G1 人形机器人</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">宇树科技 8 月科创板发行价确定，与深度求索、英伟达建立战略合作，WVLA2.0 已落地 G1 机器人「会议室自主整理」等商业化场景。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百度百科</span>
+                    <a href="https://baike.baidu.com/item/WVLA2.0/67878666" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-3">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                政策与监管
+                <span class="category-count">(3 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://finance.eastmoney.com/a/202608233850347574.html" target="_blank" rel="noopener">国务院常务会议部署新一代通信网建设：普及推广新一代智能终端</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">国务院常务会议强调坚持应用牵引、适度超前，统筹推进基础网络、空间网络、国际网络、融合网络建设，强化智能引领，普及推广新一代智能终端，积极培育智慧城市、智能制造等高价值场景。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 东方财富网</span>
+                    <a href="https://finance.eastmoney.com/a/202608233850347574.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1874137938660312392" target="_blank" rel="noopener">2026 科学智能大会在北京开幕：AI 变革科研范式</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">以「人工智能变革科研范式」为主题的 2026 科学智能大会在北京中关村开幕，近 50 位院士、2500 人参会，紧扣「基础设施—范式创新—产业应用」三层逻辑。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 中新网</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1874137938660312392" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1874402515019768614" target="_blank" rel="noopener">2026 世界机器人大会开幕：天工 Ultra 等机器人竞技</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">第二届世界人形机器人运动会在北京国家速滑馆开幕，来自六大洲 16 国 666 支队伍、2056 台机器人围绕 51 个赛项竞技；世界模型专家委员会正式成立，王坚院士任主任委员。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 新华社</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1874402515019768614" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-4">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                运营商AI动态
+                <span class="category-count">(3 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://www.cnii.com.cn/rmydb/202608/t20260825_756399.html" target="_blank" rel="noopener">三大运营商半年报透视：算力与 Token 经营成转型主引擎</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">8 月 13-20 日三大运营商披露 2026 年半年报，营收承压利润下滑，但算力业务高速增长：中国移动算力投资同比增长 71%、联通算力占资本开支 37%、电信智算集群建设提速，转型路径清晰。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 中国工信新闻网</span>
+                    <a href="https://www.cnii.com.cn/rmydb/202608/t20260825_756399.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="http://nm.people.com.cn/n2/2026/0822/c196689-41674943.html" target="_blank" rel="noopener">2026 绿色算力大会：我国智能算力规模达 2185 EFLOPS</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">绿色算力（人工智能）大会在呼和浩特举行，截至 2026 年 6 月底我国智能算力规模达 2185 EFLOPS，同比增长 177%，西部智算占比达 32.6%；和林格尔新区算力总规模达 15 万 P。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 人民网</span>
+                    <a href="http://nm.people.com.cn/n2/2026/0822/c196689-41674943.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="https://www.cnii.com.cn/rmydb/202608/t20260821_755962.html" target="_blank" rel="noopener">信息服务业投资增长 19.4%：算力 AI 投资占比提升</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">2026 年上半年三大运营商严控总资本开支，优化传统连接类投入，算力与 AI 相关投资高速增长，中国移动智能网投资同比增长 85%，算力成为新旧动能转换的微观缩影。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 中国工信新闻网</span>
+                    <a href="https://www.cnii.com.cn/rmydb/202608/t20260821_755962.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+
+    <div class="footer">
+        <p>由 AI News Web Skill 自动生成 · <a href="#">TeleAgent</a></p>
+        <p>生成时间: 2026-08-25 10:52:48</p>
+    </div>
+</div>
+</body>
+</html>
