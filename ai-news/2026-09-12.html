@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 行业日报 - 2026-09-12</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header .date { font-size: 1.1em; opacity: 0.9; }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+        .stats span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .toc {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .toc h2 { font-size: 1.1em; margin-bottom: 10px; color: #555; }
+        .toc ul { list-style: none; }
+        .toc li { padding: 4px 0; }
+        .toc a { color: #667eea; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .toc-count { color: #999; font-size: 0.85em; }
+        .category-block {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .category-title {
+            font-size: 1.3em;
+            color: #333;
+            border-left: 4px solid #667eea;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-icon { color: #667eea; }
+        .category-count { font-size: 0.7em; color: #999; font-weight: normal; }
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .news-item:last-child { border-bottom: none; }
+        .news-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .news-title { font-size: 1.05em; margin-bottom: 6px; }
+        .news-index {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            font-size: 0.7em;
+            width: 20px; height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 6px;
+            font-weight: bold;
+        }
+        .news-title a { color: #333; text-decoration: none; }
+        .news-title a:hover { color: #667eea; }
+        .news-summary { font-size: 0.9em; color: #666; margin: 6px 0; }
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8em;
+            color: #999;
+        }
+        .news-link { color: #667eea; text-decoration: none; }
+        .stars { color: #f5a623; font-size: 0.85em; letter-spacing: 2px; }
+        .importance-3 .news-title a { font-weight: bold; }
+        .importance-3 { border-left: 3px solid #f5a623; padding-left: 12px; margin-left: -15px; }
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 0.8em;
+            padding: 20px 0;
+        }
+        .footer a { color: #667eea; text-decoration: none; }
+        .headline {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3d6 100%);
+            border-left: 4px solid #f5a623;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(245, 166, 35, 0.15);
+        }
+        .headline-label {
+            font-weight: bold;
+            color: #d48806;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+        .headline-text {
+            color: #333;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>AI 行业日报</h1>
+        <div class="date">2026-09-12</div>
+        <div class="stats">
+            <span>共 5 个分类</span>
+            <span>累计 11 条资讯</span>
+        </div>
+    </div>
+
+    
+    <div class="headline">
+        <span class="headline-label">📌 今日要点</span>
+        <span class="headline-text">外滩大会收官聚焦AI新经济，中国大模型周调用40万亿Token开启出海元年，英伟达被美司法部调查，三大运营商AI智能体齐亮相服贸会。</span>
+    </div>
+
+    <div class="toc">
+        <h2>目录</h2>
+        <ul>
+            <li><a href="#cat-0">大模型与基础技术</a> <span class="toc-count">(3)</span></li><li><a href="#cat-1">AI Agent与应用</a> <span class="toc-count">(2)</span></li><li><a href="#cat-2">产业动态与投融资</a> <span class="toc-count">(2)</span></li><li><a href="#cat-3">政策与监管</a> <span class="toc-count">(2)</span></li><li><a href="#cat-4">运营商AI动态</a> <span class="toc-count">(2)</span></li>
+        </ul>
+    </div>
+
+    
+        <section class="category-block" id="cat-0">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                大模型与基础技术
+                <span class="category-count">(3 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1876017619725765935" target="_blank" rel="noopener">中国大模型出海元年：周调用量突破40万亿Token，国产模型达10T级</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">OpenRouter数据显示，中国AI大模型周调用量达40.48万亿Token、环比增长9.88%，多个国产模型Token量级已达10T级别，《科创板日报》将2026年定义为大模型出海元年。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1876017619725765935" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://caifuhao.eastmoney.com/news/20260910075525332080920" target="_blank" rel="noopener">OpenAI用未发布下一代模型解开90年数学难题：88小时产出3000亿Token</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">OpenAI官宣由一组智能体使用显著强于GPT-6 Astra的未发布下一代模型，给出悬置约90年的纳维-斯托克斯千禧年大奖难题的解，研究约88小时完成、消耗3000亿输出Token。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 东方财富网</span>
+                    <a href="https://caifuhao.eastmoney.com/news/20260910075525332080920" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="https://baike.baidu.com/item/郑颖/68979476" target="_blank" rel="noopener">远景天机气象大模型亮相外滩大会：分钟级预测全球45天天气</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">远景天机在2026外滩大会储能AI创新论坛亮相，可实现分钟级预测全球未来45天内任意区域、5公里10分钟分辨率的气象情况，在WeatherBench 2评测中与谷歌WeatherNext 2并列第一梯队，风速降水指标领先。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百度百科</span>
+                    <a href="https://baike.baidu.com/item/郑颖/68979476" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-1">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                AI Agent与应用
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="http://finance.sina.com.cn/roll/2026-09-11/doc-inirmvzz2343692.shtml" target="_blank" rel="noopener">外滩大会聚焦AI新经济：40余家具身智能厂商集体亮相</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">2026外滩大会9月9-12日在上海举行，以共创AI新经济为主题，300余家企业参展、超5万人报名，40多家具身智能厂商展示机器人分拣药品、机器狗买菜支付等真干活场景，AI从对话框走进生产生活。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 新浪网</span>
+                    <a href="http://finance.sina.com.cn/roll/2026-09-11/doc-inirmvzz2343692.shtml" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://m.sohu.com/a/1073113831_122066679" target="_blank" rel="noopener">WhatsApp将接入第三方AI智能体：即时通讯进入智能体原生时代</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">WhatsApp宣布将支持接入五个第三方AI智能体，用户可在聊天中直接唤出订位助手、文案润色Agent等，2026年9月即时通讯迎来智能体原生时代。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 搜狐网</span>
+                    <a href="https://m.sohu.com/a/1073113831_122066679" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-2">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                产业动态与投融资
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://funds.hexun.com/2026-09-10/224986795.html" target="_blank" rel="noopener">OpenAI与三星深化半导体合作，高通携手亚马逊布局AI芯片</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">OpenAI表示正与三星深化半导体领域合作，围绕下一代芯片联合生产研发；高通宣布与亚马逊开展多代定制芯片合作，共同支持AWS AI基础设施并研发1.6T光互连方案，AI芯片竞争白热化。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 和讯网</span>
+                    <a href="https://funds.hexun.com/2026-09-10/224986795.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5175474148617397591" target="_blank" rel="noopener">京东发布JoyAI模型矩阵：联合摩尔线程打造国产万卡集群</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">京东全球科技探索者大会公布AI三大基建进展：与摩尔线程等打造国产万卡集群并规划十万卡集群，1000万小时数据采集推进中，形成覆盖多模态、世界模型和具身模型的JoyAI矩阵。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百度</span>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5175474148617397591" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-3">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                政策与监管
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://news.sohu.com/a/1074570860_114778" target="_blank" rel="noopener">美司法部调查英伟达：涉170亿美元Groq交易是否规避反垄断审查</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">美国司法部正在调查英伟达是否试图规避反垄断审查，涉及英伟达去年与AI芯片初创公司Groq达成的价值170亿美元交易，包括芯片技术非排他性授权及吸纳Groq创始人。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 搜狐网</span>
+                    <a href="https://news.sohu.com/a/1074570860_114778" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1875492454945535718" target="_blank" rel="noopener">欧盟将ChatGPT等纳入《数字服务法》最高等级监管</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">欧盟委员会宣布将ChatGPT、Reddit和Roblox纳入《数字服务法》最高等级监管范围，因用户规模巨大且社会影响扩大，需接受更高标准的审查与问责，AI监管持续收紧。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1875492454945535718" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-4">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                运营商AI动态
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://q.stock.sohu.com/cn/news.html?textId=1056420042" target="_blank" rel="noopener">三大运营商AI智能体首聚服贸会：TeleAgent、MobileClaw、UniClaw同台</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">2026服贸会ICT展区中，中国电信TeleAgent、中国移动MobileClaw、中国联通UniClaw三款AI智能体首次齐聚，带来十项落地应用服务方案，运营商从卖带宽转向卖Token。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 搜狐网</span>
+                    <a href="https://q.stock.sohu.com/cn/news.html?textId=1056420042" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1876037834659780814" target="_blank" rel="noopener">中移金科亮相服贸会：AI+金融打造运营商特色数智金融体系</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">中移金融科技带来AI+智慧金融、移动出行、超级SIM数智生活三大展项，以AI大模型和区块链推动数据+信用+金融深度融合，号码借依托移动网龄与金融权益资金流向实体企业。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1876037834659780814" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+
+    <div class="footer">
+        <p>由 AI News Web Skill 自动生成 · <a href="#">TeleAgent</a></p>
+        <p>生成时间: 2026-09-12 10:34:41</p>
+    </div>
+</div>
+</body>
+</html>
