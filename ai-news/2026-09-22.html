@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 行业日报 - 2026-09-22</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header .date { font-size: 1.1em; opacity: 0.9; }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+        .stats span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .toc {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .toc h2 { font-size: 1.1em; margin-bottom: 10px; color: #555; }
+        .toc ul { list-style: none; }
+        .toc li { padding: 4px 0; }
+        .toc a { color: #667eea; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .toc-count { color: #999; font-size: 0.85em; }
+        .category-block {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .category-title {
+            font-size: 1.3em;
+            color: #333;
+            border-left: 4px solid #667eea;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-icon { color: #667eea; }
+        .category-count { font-size: 0.7em; color: #999; font-weight: normal; }
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .news-item:last-child { border-bottom: none; }
+        .news-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .news-title { font-size: 1.05em; margin-bottom: 6px; }
+        .news-index {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            font-size: 0.7em;
+            width: 20px; height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 6px;
+            font-weight: bold;
+        }
+        .news-title a { color: #333; text-decoration: none; }
+        .news-title a:hover { color: #667eea; }
+        .news-summary { font-size: 0.9em; color: #666; margin: 6px 0; }
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8em;
+            color: #999;
+        }
+        .news-link { color: #667eea; text-decoration: none; }
+        .stars { color: #f5a623; font-size: 0.85em; letter-spacing: 2px; }
+        .importance-3 .news-title a { font-weight: bold; }
+        .importance-3 { border-left: 3px solid #f5a623; padding-left: 12px; margin-left: -15px; }
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 0.8em;
+            padding: 20px 0;
+        }
+        .footer a { color: #667eea; text-decoration: none; }
+        .headline {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3d6 100%);
+            border-left: 4px solid #f5a623;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(245, 166, 35, 0.15);
+        }
+        .headline-label {
+            font-weight: bold;
+            color: #d48806;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+        .headline-text {
+            color: #333;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>AI 行业日报</h1>
+        <div class="date">2026-09-22</div>
+        <div class="stats">
+            <span>共 5 个分类</span>
+            <span>累计 11 条资讯</span>
+        </div>
+    </div>
+
+    
+    <div class="headline">
+        <span class="headline-label">📌 今日要点</span>
+        <span class="headline-text">运营商加速从经营连接到经营词元Token，2026国际信息通信展启幕；阶跃Step 5 Preview杀进全球开源前三，英伟达预计明年芯片销量翻倍</span>
+    </div>
+
+    <div class="toc">
+        <h2>目录</h2>
+        <ul>
+            <li><a href="#cat-0">大模型与基础技术</a> <span class="toc-count">(3)</span></li><li><a href="#cat-1">AI Agent 与应用</a> <span class="toc-count">(2)</span></li><li><a href="#cat-2">产业动态与投融资</a> <span class="toc-count">(2)</span></li><li><a href="#cat-3">政策与监管</a> <span class="toc-count">(2)</span></li><li><a href="#cat-4">运营商AI动态</a> <span class="toc-count">(2)</span></li>
+        </ul>
+    </div>
+
+    
+        <section class="category-block" id="cat-0">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                大模型与基础技术
+                <span class="category-count">(3 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1876829750021381402&wfr=spider&for=pc" target="_blank" rel="noopener">阶跃星辰发布旗舰基座模型Step 5 Preview，600B参数杀进全球开源前三</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">9月20日阶跃星辰发布新一代旗舰基座模型Step 5 Preview，总参数量6000亿，在Artificial Analysis Intelligence Index中排名全球开源前三，重点面向AI编程、软件工程与专业知识工作等场景，计划于10月15日开源。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1876829750021381402&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://xueqiu.com/1077174092/410094951" target="_blank" rel="noopener">中国AI大模型周调用量达67.46万亿Token，连续二十一周位居全球第一</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">上周（9月14日至20日）中国AI大模型周调用量达67.46万亿Token，是美国的4.7倍，连续二十一周全球第一；全球总调用量129万亿Token，环比增长1.57%，DeepSeek V4.1-Flash登顶调用量榜。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 雪球</span>
+                    <a href="https://xueqiu.com/1077174092/410094951" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="https://blog.csdn.net/u130130/article/details/165616690" target="_blank" rel="noopener">阶跃星辰发布StepAudio 3全栈音频大模型，登顶全球榜单</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">阶跃星辰推出新一代StepAudio 3系列，一次性涵盖实时双工交互、语音识别、真人级音色合成、音效生成与音乐创作五大场景，其中实时全双工对话模型在多项第三方测试中位居前列。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: CSDN</span>
+                    <a href="https://blog.csdn.net/u130130/article/details/165616690" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-1">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                AI Agent 与应用
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://blog.csdn.net/u130130334/article/details/165748181" target="_blank" rel="noopener">Anthropic整合Claude工作流，聊天与Cowork合并为单一入口</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">Anthropic宣布将Claude Cowork与聊天全面合并为单一入口，并上线Docs与Slides；OpenAI同期建立模型失准事件公开通报框架并披露过去半年案例，上线ChatGPT赞助智能体广告。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: CSDN</span>
+                    <a href="https://blog.csdn.net/u130130334/article/details/165748181" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1876810612217725881&wfr=spider&for=pc" target="_blank" rel="noopener">阿里2026云栖大会召开，围绕模型、Agent与Agentic Cloud拆解五层全栈技术</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">本周阿里2026云栖大会在杭州召开，围绕模型、Agent与Agentic Cloud拆解五层全栈技术；叠加AICC人工智能计算大会、全球AI芯片峰会GACS等，本周成为AI与半导体产业周。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1876810612217725881&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-2">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                产业动态与投融资
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1876624856645855003&wfr=spider&for=pc" target="_blank" rel="noopener">黄仁勋：英伟达明年芯片销量将是今年两倍，AI加速向多行业扩散</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">英伟达CEO黄仁勋在苏格兰AI峰会上表示，随着AI向医疗、交通、娱乐等行业加速普及，预计公司2027年芯片销量将达到今年的两倍，比此前财报给出的预期更激进；他同时表态不应像管社媒那样监管AI。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1876624856645855003&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1876449074035008079&wfr=spider&for=pc" target="_blank" rel="noopener">Meta计划明年上半年在数据中心部署自研ARKE AI芯片</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">美光展示全球首个512GB DDR5内存模组（预计2027年下半年量产），英特尔、AMD正开展适配验证；Meta计划明年上半年在数据中心部署自研ARKE AI芯片降本提效，AI硬件基础设施竞争持续升温。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1876449074035008079&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-3">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                政策与监管
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://baike.baidu.com/item/人工智能安全标准体系/67903230" target="_blank" rel="noopener">《人工智能安全治理框架3.0》发布，AI治理进入新阶段</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">2026年国家网络安全宣传周开幕式上正式发布《人工智能安全治理框架3.0》，此前2.0版于2025年网安周发布。框架持续迭代，为人工智能安全风险应对提供标准支撑。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百度百科</span>
+                    <a href="https://baike.baidu.com/item/人工智能安全标准体系/67903230" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1876811182874858407&wfr=spider&for=pc" target="_blank" rel="noopener">Anthropic、OpenAI、谷歌等被诉协同放缓AI研发，涉嫌反垄断串通</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">一份民事诉讼指控Anthropic、OpenAI、SpaceXAI及谷歌因近期呼吁协同放缓AI研发速度而存在串通行为，违反美国反垄断法；原告主张相关规则应由政府以透明合法方式制定。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1876811182874858407&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-4">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                运营商AI动态
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://mp.weixin.qq.com/s?__biz=MjM5MzcyNjM0NQ==&mid=2650623296&idx=3&sn=efe742d87506d8e6f46a3630706a56ac&chksm=bf4b07796c2ed41fdcbdc6b2e5ead63bec501c858cf8d44f380eeb8c80ce958515be726a89e8&scene=27" target="_blank" rel="noopener">2026中国国际信息通信展览会开幕，运营商从流量经营迈向词元Token经营</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">9月22日至24日PT展在京举办，本届最鲜明信号是Token从技术术语走向产业前台：中国电信依托息壤算力网推动Token工厂落地，中国移动MoMA平台聚合300余款大模型，联通元景MaaS汇聚230多个模型并探索跨境词元工厂。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 腾讯网</span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5MzcyNjM0NQ==&mid=2650623296&idx=3&sn=efe742d87506d8e6f46a3630706a56ac&chksm=bf4b07796c2ed41fdcbdc6b2e5ead63bec501c858cf8d44f380eeb8c80ce958515be726a89e8&scene=27" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1876713800650472185&wfr=spider&for=pc" target="_blank" rel="noopener">中国联通发布AI终端新生态共创行动计划与智慧社区平台4.0</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">2026中国联通合作伙伴大会服务分论坛以AI驱动、向智同行为主题，发布一刻钟便民生态圈3.0升级计划、AI终端新生态共创行动计划，并推出智慧社区平台4.0白皮书和云智融合创新开放平台。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1876713800650472185&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+
+    <div class="footer">
+        <p>由 AI News Web Skill 自动生成 · <a href="#">TeleAgent</a></p>
+        <p>生成时间: 2026-09-22 09:05:54</p>
+    </div>
+</div>
+</body>
+</html>
