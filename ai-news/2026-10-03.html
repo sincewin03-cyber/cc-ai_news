@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 行业日报 - 2026-10-03</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header .date { font-size: 1.1em; opacity: 0.9; }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+        .stats span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .toc {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .toc h2 { font-size: 1.1em; margin-bottom: 10px; color: #555; }
+        .toc ul { list-style: none; }
+        .toc li { padding: 4px 0; }
+        .toc a { color: #667eea; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .toc-count { color: #999; font-size: 0.85em; }
+        .category-block {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .category-title {
+            font-size: 1.3em;
+            color: #333;
+            border-left: 4px solid #667eea;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-icon { color: #667eea; }
+        .category-count { font-size: 0.7em; color: #999; font-weight: normal; }
+        .news-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .news-item:last-child { border-bottom: none; }
+        .news-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .news-title { font-size: 1.05em; margin-bottom: 6px; }
+        .news-index {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            font-size: 0.7em;
+            width: 20px; height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 6px;
+            font-weight: bold;
+        }
+        .news-title a { color: #333; text-decoration: none; }
+        .news-title a:hover { color: #667eea; }
+        .news-summary { font-size: 0.9em; color: #666; margin: 6px 0; }
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8em;
+            color: #999;
+        }
+        .news-link { color: #667eea; text-decoration: none; }
+        .stars { color: #f5a623; font-size: 0.85em; letter-spacing: 2px; }
+        .importance-3 .news-title a { font-weight: bold; }
+        .importance-3 { border-left: 3px solid #f5a623; padding-left: 12px; margin-left: -15px; }
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 0.8em;
+            padding: 20px 0;
+        }
+        .footer a { color: #667eea; text-decoration: none; }
+        .headline {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3d6 100%);
+            border-left: 4px solid #f5a623;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(245, 166, 35, 0.15);
+        }
+        .headline-label {
+            font-weight: bold;
+            color: #d48806;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+        .headline-text {
+            color: #333;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>AI 行业日报</h1>
+        <div class="date">2026-10-03</div>
+        <div class="stats">
+            <span>共 5 个分类</span>
+            <span>累计 11 条资讯</span>
+        </div>
+    </div>
+
+    
+    <div class="headline">
+        <span class="headline-label">📌 今日要点</span>
+        <span class="headline-text">中外大模型竞速白热化：谷歌Gemini 4 Argon发布、中国开源模型获对手认证距前沿仅4个月，博通600亿美元融资加码AI算力基建。</span>
+    </div>
+
+    <div class="toc">
+        <h2>目录</h2>
+        <ul>
+            <li><a href="#cat-0">大模型与基础技术</a> <span class="toc-count">(3)</span></li><li><a href="#cat-1">AI Agent 与应用</a> <span class="toc-count">(3)</span></li><li><a href="#cat-2">产业动态与投融资</a> <span class="toc-count">(2)</span></li><li><a href="#cat-3">政策与监管</a> <span class="toc-count">(1)</span></li><li><a href="#cat-4">运营商AI动态</a> <span class="toc-count">(2)</span></li>
+        </ul>
+    </div>
+
+    
+        <section class="category-block" id="cat-0">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                大模型与基础技术
+                <span class="category-count">(3 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1877800639356973945&wfr=spider&for=pc" target="_blank" rel="noopener">谷歌发布新一代旗舰模型Gemini 4 Argon，多项指标登顶基准测试</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">Google DeepMind于9月30日正式发布新一代旗舰模型Gemini 4 Argon，主攻工程与网络安全场景，多项指标登顶基准测试榜单，当前访问权限受限，旗舰模型竞争进入新一轮迭代周期。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 华尔街见闻</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1877800639356973945&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908pg7a.html" target="_blank" rel="noopener">来自「对手」的认证：GLM-5.3获Anthropic红队研究，中国最强模型距美国前沿仅4个月</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">美国当地时间9月29日，Anthropic前沿红队发布GLM-5.3网络安全能力研究报告，这份出自海外顶尖模型企业的报告意外成为中国开源模型的「对手认证」，评估其能力距美国前沿模型仅剩约4个月差距。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 新浪科技</span>
+                    <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908pg7a.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="http://finance.sina.com.cn/roll/2026-10-02/doc-initvtwx4505056.shtml" target="_blank" rel="noopener">DeepSeek正式开源华为昇腾算力平台全套基础设施组件，对标CUDA生态</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">DeepSeek宣布开源面向华为昇腾算力平台的全套基础设施组件，实现国产算力全栈软件生态突破，被视为彻底对标海外CUDA生态的里程碑，国产AI软硬生态闭环加速成形。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 新浪财经</span>
+                    <a href="http://finance.sina.com.cn/roll/2026-10-02/doc-initvtwx4505056.shtml" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-1">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                AI Agent 与应用
+                <span class="category-count">(3 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908pjki.html" target="_blank" rel="noopener">OpenAI上线ChatGPT「虚拟试穿」功能：能帮你试衣，还能找明星同款</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">OpenAI宣布在全球推出两项新功能：让用户虚拟试穿服装和配饰，以及新增商品收藏功能，均基于此前推出的ChatGPT Images技术，ChatGPT的AI购物能力再度扩展。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: IT之家</span>
+                    <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908pjki.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://xueqiu.com/1739536984/411167029" target="_blank" rel="noopener">Meta AI Agent产品Muse被指颠覆Airbnb、Booking等聚合平台商业模式</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">华尔街见闻分析认为，Meta推出的AI Agent产品Muse正在颠覆Airbnb、Booking、Uber、DoorDash、亚马逊等互联网聚合平台的商业模式，AI Agent入口之争从工具层升级为平台层变革。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 华尔街见闻</span>
+                    <a href="https://xueqiu.com/1739536984/411167029" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">3</span>
+                        <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908png8.html" target="_blank" rel="noopener">Anthropic拟斥资1亿美元培训1万名工程师，破解企业AI落地「人才荒」</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">当地时间10月2日，Anthropic宣布推出Claude Frontier Academy，计划投入1亿美元（约合6.71亿元人民币）培训1万名工程师，帮助企业把AI项目从构想真正推进到业务应用。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: IT之家</span>
+                    <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908png8.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-2">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                产业动态与投融资
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1877931925042593371&wfr=spider&for=pc" target="_blank" rel="noopener">博通联手黑石筹组600亿美元融资，为Anthropic等AI公司铺路算力</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">据彭博消息，博通正牵头筹组规模达600亿美元的债务融资，为Anthropic等AI企业采购芯片及建设数据中心提供资金，跻身AI芯片领域最大债务融资交易之列，其中420亿美元拟发行A类优先有担保债券。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 彭博社</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1877931925042593371&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908pmlg.html" target="_blank" rel="noopener">国家电网年内采购约8500台具身智能设备、总投资约68亿元，南方电网携手宇树科技</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">国家电网《2026年具身智能发展规划》计划年内采购约8500台具身智能设备，含5000台四足机器狗、500台人形带电作业机器人等，总投资约68亿元；南方电网9月与宇树科技签订战略合作框架协议，电力行业具身智能加速落地。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 电能革新</span>
+                    <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908pmlg.html" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-3">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                政策与监管
+                <span class="category-count">(1 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://mp.weixin.qq.com/s?__biz=MzIwNTQ0OTYwNg==&mid=2247607701&idx=2&sn=a18f20f0697b2fdfb38ef25dc5be1aa5&chksm=964ef638b958cbd45d03a6fd26db67ba72ada46eca2ea7eef2fec8deaa8905557c0627416260&scene=27" target="_blank" rel="noopener">美FTC被曝加大Anthropic、OpenAI等AI巨头调查力度</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">美国监管方联邦贸易委员会（FTC）被曝加大了对Anthropic、OpenAI等AI巨头的调查力度，但官员称调查不会妨碍美国在AI领域的主导地位；同期最高法发布涉人工智能纠纷案件审理意见，确立AI纠纷分层裁判规则。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 华尔街见闻</span>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzIwNTQ0OTYwNg==&mid=2247607701&idx=2&sn=a18f20f0697b2fdfb38ef25dc5be1aa5&chksm=964ef638b958cbd45d03a6fd26db67ba72ada46eca2ea7eef2fec8deaa8905557c0627416260&scene=27" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+        <section class="category-block" id="cat-4">
+            <h2 class="category-title">
+                <span class="category-icon">◆</span>
+                运营商AI动态
+                <span class="category-count">(2 条)</span>
+            </h2>
+            <div class="news-list">
+                
+            <article class="news-item importance-3">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">1</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1877979156397769508&wfr=spider&for=pc" target="_blank" rel="noopener">词元经济离大众消费还有多远：三大运营商词元套餐规模化普及尚需时日</a>
+                    </h3>
+                    <span class="stars">★★★</span>
+                </div>
+                <p class="news-summary">今年5月移动、联通、电信集中上线词元套餐，将AI算力打包成可订购、可计费的标准化产品，但真正形成持续付费习惯的用户规模仍然有限；长远来看，运营商有望成为做大词元经济的重要推手，词元有望从开发者群体走向大众消费者。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 经济日报</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1877979156397769508&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            <article class="news-item importance-2">
+                <div class="news-header">
+                    <h3 class="news-title">
+                        <span class="news-index">2</span>
+                        <a href="https://baijiahao.baidu.com/s?id=1877912718563787941&wfr=spider&for=pc" target="_blank" rel="noopener">移动云MoMA将亮相2026人工智能产业大会，构建一站式「模型超市」</a>
+                    </h3>
+                    <span class="stars">★★☆</span>
+                </div>
+                <p class="news-summary">中国移动携移动云MoMA平台亮相10月14-16日在济南举办的2026人工智能产业大会。MoMA是面向全国企业和开发者的统一模型API聚合与智能调度平台，接入市面主流模型，集中展示AI全栈能力体系。</p>
+                <div class="news-meta">
+                    <span class="news-source">来源: 百家号</span>
+                    <a href="https://baijiahao.baidu.com/s?id=1877912718563787941&wfr=spider&for=pc" target="_blank" rel="noopener" class="news-link">查看原文 →</a>
+                </div>
+            </article>
+            </div>
+        </section>
+
+    <div class="footer">
+        <p>由 AI News Web Skill 自动生成 · <a href="#">TeleAgent</a></p>
+        <p>生成时间: 2026-10-03 09:14:05</p>
+    </div>
+</div>
+</body>
+</html>
