@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>收益激励喜报生成器</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{background:#f3ead8}
+body{font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",sans-serif;min-height:100vh;padding:14px 12px 44px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:520px;margin:0 auto}
+.pt{text-align:center;font-size:21px;font-weight:800;color:#a0120e;letter-spacing:3px;margin-bottom:4px}
+.ps{text-align:center;font-size:12.5px;color:#8a6d3b;margin-bottom:14px}
+.pw{background:#fff;border-radius:14px;padding:12px;box-shadow:0 4px 18px rgba(160,18,14,.16);margin-bottom:16px;text-align:center}
+.live{text-align:center;font-size:15px;font-weight:800;color:#a0120e;margin-bottom:10px;background:linear-gradient(90deg,#fff7e8,#ffefe0);padding:8px;border-radius:8px}
+.live b{color:#c0201c;font-size:18px}
+#pv{max-width:100%;height:auto;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.14);display:block;margin:0 auto}
+.tip{font-size:11.5px;color:#b08850;text-align:center;margin-top:8px;line-height:1.6}
+.cd{background:#fff;border-radius:14px;padding:16px 14px 12px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:14px}
+.ct{font-size:15px;font-weight:700;color:#a0120e;margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.ct::before{content:"";width:4px;height:15px;background:#d33a2c;border-radius:2px}
+.f{margin-bottom:13px}
+.f label{display:block;font-size:12.5px;color:#666;margin-bottom:6px}
+.f input{width:100%;padding:13px 14px;font-size:16px;border:1px solid #e3d5b8;border-radius:10px;background:#fdfaf3;outline:none;color:#333;-webkit-appearance:none;appearance:none}
+.f input:focus{border-color:#c03020;background:#fff;box-shadow:0 0 0 3px rgba(192,48,32,.08)}
+.f .hint{font-size:11px;color:#b08850;margin-top:5px;line-height:1.5}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tog{width:100%;padding:15px 6px;font-size:17px;font-weight:800;border:2px solid #e3d5b8;border-radius:12px;background:#fdfaf3;color:#b09a70;cursor:pointer;transition:.15s;-webkit-user-select:none;user-select:none}
+.tog.on{border-color:#d33a2c;background:linear-gradient(135deg,#d4351f,#a0120e);color:#fff;box-shadow:0 3px 10px rgba(160,18,14,.3)}
+.tog span{display:block;font-size:11px;font-weight:400;margin-top:3px;color:inherit}
+.btn{width:100%;padding:16px;font-size:18px;font-weight:800;background:linear-gradient(135deg,#e23a28,#a0120e);color:#fff;border:none;border-radius:12px;letter-spacing:4px;box-shadow:0 5px 16px rgba(160,18,14,.4);margin-top:6px;cursor:pointer}
+.btn:active{transform:scale(.98)}
+.bs{margin-bottom:11px}
+.br{background:linear-gradient(135deg,#f5e6c8,#e8d3a8);color:#8a5a20;box-shadow:0 2px 8px rgba(138,90,32,.22)}
+.ft{text-align:center;font-size:12px;color:#b09a70;margin-top:16px;line-height:1.7}
+/* 大图预览遮罩 */
+.mask{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px}
+.mask img{max-width:100%;max-height:72vh;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,.5)}
+.mask .sav{color:#ffd700;font-size:14px;margin-top:14px;text-align:center;line-height:1.7}
+.mask .close{margin-top:18px;padding:13px 0;width:100%;max-width:360px;background:#d4351f;color:#fff;border-radius:10px;font-size:16px;font-weight:700;text-align:center;cursor:pointer;letter-spacing:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="pt">收益激励喜报</div>
+<div class="ps">发展一户 · 四重激励 · 收益看得见</div>
+
+<div class="pw">
+<div class="live">单户总收益：<b id="liveTotal">0</b> 元</div>
+<canvas id="pv"></canvas>
+<div class="tip">下方填好数字，点“生成图片”，长按大图即可保存转发</div>
+</div>
+
+<div class="cd">
+<div class="ct">① 迁转套餐（套餐价值）</div>
+<div class="f"><label>套餐价值（如 139、119）</label><input id="i_tc" value="139" inputmode="decimal" type="text">
+<div class="hint">套餐激励 = 套餐价值 × 0.5，如 139×0.5 = 69.5 元</div></div>
+</div>
+
+<div class="cd">
+<div class="ct">② 提值金额</div>
+<div class="f"><label>提值金额（如 30）</label><input id="i_tz" value="30" inputmode="decimal" type="text">
+<div class="hint">提值激励 = 提值金额 × 5，如 30×5 = 150 元</div></div>
+</div>
+
+<div class="cd">
+<div class="ct">③ 智屏 / ④ 全光（办理即叠加上激励）</div>
+<div class="r2">
+<div class="f"><button type="button" class="tog on" id="i_zp" onclick="toggle(this,'zp')">智屏<span>办理 +100 元</span></button></div>
+<div class="f"><button type="button" class="tog on" id="i_qg" onclick="toggle(this,'qg')">全光<span>办理 +50 元</span></button></div>
+</div>
+</div>
+
+<div class="cd">
+<div class="ct">发展人</div>
+<div class="f"><label>发展人姓名（如：王强）</label><input id="i_cp" value="王强" maxlength="20" type="text"></div>
+</div>
+
+<button class="btn bs" onclick="saveImg()">生成图片</button>
+<button class="btn br" onclick="reset()">恢复默认</button>
+<div class="ft">点击“生成图片”弹出大图<br>长按图片即可保存到手机 / 群转发</div>
+</div>
+
+<script>
+var CW=750,CH=1210,CX=375;
+var c=document.getElementById('pv'),x=c.getContext('2d');
+var st={zp:true,qg:true};
+
+function fmt(n){
+  if(!isFinite(n))return '0';
+  n=Math.round(n*100)/100;
+  return Number.isInteger(n)?String(n):String(n);
+}
+function calc(){
+  var tc=parseFloat(document.getElementById('i_tc').value)||0;
+  var tz=parseFloat(document.getElementById('i_tz').value)||0;
+  var a=tc*0.5, b=tz*5, c3=st.zp?100:0, c4=st.qg?50:0;
+  return {tc:tc,tz:tz,a:a,b:b,c3:c3,c4:c4,total:a+b+c3+c4};
+}
+function toggle(btn,key){
+  st[key]=!st[key];
+  btn.classList.toggle('on',st[key]);
+  draw();updateLive();
+}
+function updateLive(){
+  var d=calc();
+  document.getElementById('liveTotal').textContent=fmt(d.total);
+}
+
+/* ===== 基础绘制工具 ===== */
+function rr(x0,y0,w,h,r){
+  x.beginPath();
+  x.moveTo(x0+r,y0);
+  x.arcTo(x0+w,y0,x0+w,y0+h,r);
+  x.arcTo(x0+w,y0+h,x0,y0+h,r);
+  x.arcTo(x0,y0+h,x0,y0,r);
+  x.arcTo(x0,y0,x0+r,y0,r);
+  x.closePath();
+}
+function star5(cx,cy,r,color){
+  x.fillStyle=color;x.beginPath();
+  for(var i=0;i<10;i++){
+    var ang=-Math.PI/2+i*Math.PI/5,rd=i%2?r*.42:r;
+    var px=cx+Math.cos(ang)*rd,py=cy+Math.sin(ang)*rd;
+    i?x.lineTo(px,py):x.moveTo(px,py);
+  }
+  x.closePath();x.fill();
+}
+function sparkle(cx,cy,r,color,alpha){
+  x.fillStyle=color;x.globalAlpha=alpha==null?1:alpha;
+  x.beginPath();
+  x.moveTo(cx,cy-r);x.quadraticCurveTo(cx+r*.18,cy-r*.18,cx+r,cy);
+  x.quadraticCurveTo(cx+r*.18,cy+r*.18,cx,cy+r);
+  x.quadraticCurveTo(cx-r*.18,cy+r*.18,cx-r,cy);
+  x.quadraticCurveTo(cx-r*.18,cy-r*.18,cx,cy-r);
+  x.closePath();x.fill();x.globalAlpha=1;
+}
+function coin(cx,cy,r){
+  var g=x.createRadialGradient(cx-r*.35,cy-r*.35,r*.1,cx,cy,r);
+  g.addColorStop(0,'#FFF3BB');g.addColorStop(.45,'#FFD24A');g.addColorStop(1,'#C98A12');
+  x.fillStyle=g;x.beginPath();x.arc(cx,cy,r,0,6.2832);x.fill();
+  x.strokeStyle='#8A5A0A';x.lineWidth=2;x.beginPath();x.arc(cx,cy,r,0,6.2832);x.stroke();
+  x.strokeStyle='rgba(138,90,10,.55)';x.lineWidth=1.5;x.beginPath();x.arc(cx,cy,r*.72,0,6.2832);x.stroke();
+  x.fillStyle='#8A5A0A';x.font='bold '+(r*1.05)+'px "Microsoft YaHei"';
+  x.textAlign='center';x.textBaseline='middle';
+  x.fillText('¥',cx,cy+1);
+  sparkle(cx-r*.5,cy-r*.6,r*.22,'#FFFBE0',.9);
+}
+function firework(cx,cy,r){
+  x.save();
+  for(var i=0;i<12;i++){
+    var a=i*Math.PI/6+0.26, rr2=r*(i%2?0.65:1);
+    var ex=cx+Math.cos(a)*rr2, ey=cy+Math.sin(a)*rr2;
+    x.strokeStyle='rgba(255,200,80,.75)';x.lineWidth=2.5;
+    x.beginPath();x.moveTo(cx,cy);x.lineTo(ex,ey);x.stroke();
+    x.fillStyle=i%2?'#FFD24A':'#FF9A3D';
+    x.beginPath();x.arc(ex,ey,3.4,0,6.2832);x.fill();
+  }
+  x.fillStyle='#FFF3BB';x.beginPath();x.arc(cx,cy,4,0,6.2832);x.fill();
+  x.restore();
+}
+function confetti(cx,cy,s,color,rot){
+  x.save();x.translate(cx,cy);x.rotate(rot);
+  x.fillStyle=color;x.fillRect(-s/2,-s*.32,s,s*.64);
+  x.restore();
+}
+
+/* ===== 喜庆背景 ===== */
+function bgDecor(){
+  var g=x.createLinearGradient(0,0,0,CH);
+  g.addColorStop(0,'#8E0E14');g.addColorStop(.28,'#C01A20');g.addColorStop(.62,'#B01618');g.addColorStop(1,'#8E0E14');
+  x.fillStyle=g;x.fillRect(0,0,CW,CH);
+  var r=x.createRadialGradient(CX,430,60,CX,430,760);
+  r.addColorStop(0,'rgba(255,220,120,.22)');r.addColorStop(.55,'rgba(255,200,90,.08)');r.addColorStop(1,'rgba(255,200,90,0)');
+  x.fillStyle=r;x.fillRect(0,0,CW,CH);
+  x.save();
+  for(var i=-5;i<=5;i++){
+    var a=i*0.16, len=560, wdt=i%2?26:40;
+    x.fillStyle='rgba(255,230,140,'+(i%2?0.045:0.07)+')';
+    x.beginPath();
+    x.moveTo(CX-6,-40);x.lineTo(CX+6,-40);
+    x.lineTo(CX+Math.sin(a)*len+wdt,Math.cos(a)*len-160);
+    x.lineTo(CX+Math.sin(a)*len-wdt,Math.cos(a)*len-160);
+    x.closePath();x.fill();
+  }
+  x.restore();
+  x.save();
+  var bands=[[-70,.42],[-200,.30],[70,.42],[200,.30]];
+  bands.forEach(function(b){
+    x.strokeStyle='rgba(255,215,110,.06)';x.lineWidth=64;
+    x.beginPath();x.moveTo(CX+b[0],0);x.lineTo(CX+b[0]+CH*b[1],CH);x.stroke();
+  });
+  x.restore();
+  firework(92,148,50);firework(658,148,50);
+  firework(78,948,36);firework(672,948,36);
+  firework(160,760,26);firework(590,760,26);
+  coin(62,300,24);coin(688,300,24);
+  coin(55,640,19);coin(695,640,19);
+  coin(74,880,26);coin(676,880,26);
+  coin(60,1092,21);coin(690,1092,21);
+  coin(150,1028,13);coin(600,1028,13);
+  var conf=[[128,250,10,-.4],[622,250,10,.4],[100,560,8,.5],[650,560,8,-.5],
+            [120,1000,9,-.3],[630,1000,9,.3],[90,1130,7,.6],[660,1130,7,-.6],
+            [190,170,6,.2],[560,170,6,-.2],[70,450,6,.9],[680,450,6,-.9]];
+  conf.forEach(function(p,i){
+    confetti(p[0],p[1],p[2],i%3===0?'#FFE9A8':(i%3===1?'#FF9A3D':'#E8564A'),p[3]);
+  });
+  var sp=[[250,236,5],[500,236,5],[100,330,7],[650,330,7],[88,600,6],[662,600,6],
+          [70,830,7],[680,830,7],[130,1080,5],[620,1080,5],[220,1150,4],[530,1150,4]];
+  sp.forEach(function(p){sparkle(p[0],p[1],p[2],'#FFF6DC',.85)});
+  star5(46,420,10,'#FFD24A');star5(704,420,10,'#FFD24A');
+  star5(52,1010,8,'#FFE39A');star5(698,1010,8,'#FFE39A');
+  star5(240,1128,7,'#FFD24A');star5(510,1128,7,'#FFD24A');
+}
+
+/* ===== 上下卷轴轴杆 ===== */
+function rod(y){
+  var g=x.createLinearGradient(0,y,0,y+44);
+  g.addColorStop(0,'#9C141B');g.addColorStop(.5,'#7A0E15');g.addColorStop(1,'#5E0A0F');
+  x.fillStyle=g;x.fillRect(0,y,CW,44);
+  x.fillStyle='rgba(255,255,255,.14)';x.fillRect(0,y+5,CW,3);
+  x.fillStyle='#D8A542';x.fillRect(0,y+44,CW,3);
+  [CX-334,CX+278].forEach(function(cxp){
+    var cg=x.createLinearGradient(cxp,0,cxp+56,0);
+    cg.addColorStop(0,'#8A5A0A');cg.addColorStop(.5,'#FFD873');cg.addColorStop(1,'#8A5A0A');
+    rr(cxp,y+7,56,30,15);x.fillStyle=cg;x.fill();
+    x.strokeStyle='#5E3A05';x.lineWidth=2;rr(cxp,y+7,56,30,15);x.stroke();
+  });
+}
+
+/* ===== 主图绘制 ===== */
+function draw(){
+  var d=calc();
+  var cp=document.getElementById('i_cp').value.trim()||'无名英雄';
+  c.width=CW;c.height=CH;
+  bgDecor();
+  rod(0);rod(1164);
+
+  /* === 1. 标题横幅 === */
+  var bx=115,by=74,bw=520,bh=108;
+  rr(bx-6,by+6,bw,bh,24);x.fillStyle='rgba(60,4,8,.5)';x.fill();
+  var bg1=x.createLinearGradient(0,by,0,by+bh);
+  bg1.addColorStop(0,'#E23A28');bg1.addColorStop(.5,'#B0151C');bg1.addColorStop(1,'#8E0E14');
+  rr(bx,by,bw,bh,24);x.fillStyle=bg1;x.fill();
+  x.strokeStyle='#FFE9B8';x.lineWidth=3.5;rr(bx,by,bw,bh,24);x.stroke();
+  x.strokeStyle='rgba(255,233,184,.4)';x.lineWidth=1;rr(bx+7,by+7,bw-14,bh-14,18);x.stroke();
+  star5(bx+52,by+bh/2,22,'#FFD24A');star5(bx+bw-52,by+bh/2,22,'#FFD24A');
+  sparkle(bx+88,by+26,7,'#FFF6DC',.9);sparkle(bx+bw-88,by+26,7,'#FFF6DC',.9);
+  x.textAlign='center';x.textBaseline='middle';
+  var tC=['收','益','激','励'],ts=96;
+  var sx1=CX-(tC.length-1)*ts/2;
+  x.font='bold 72px "STLiti","华文隶书","LiSu","KaiTi","Microsoft YaHei"';
+  x.shadowColor='#4E060A';x.shadowBlur=8;x.fillStyle='#FFE9C8';
+  for(var i=0;i<tC.length;i++)x.fillText(tC[i],sx1+i*ts,by+bh/2+4);
+  x.shadowBlur=0;
+
+  /* === 2. 单户总激励（置顶主视觉）=== */
+  x.save();
+  for(var i=0;i<28;i++){
+    var a=i*Math.PI/14, len=i%2?150:205;
+    x.fillStyle='rgba(255,215,110,.06)';
+    x.beginPath();x.moveTo(CX,332);
+    x.lineTo(CX+Math.cos(a)*len-13,332+Math.sin(a)*len);
+    x.lineTo(CX+Math.cos(a)*len+13,332+Math.sin(a)*len);
+    x.closePath();x.fill();
+  }
+  x.restore();
+  var tx=90,ty=246,tw=570,th=168;
+  rr(tx-5,ty+5,tw,th,26);x.fillStyle='rgba(60,4,8,.5)';x.fill();
+  var tg=x.createLinearGradient(0,ty,0,ty+th);
+  tg.addColorStop(0,'#B81217');tg.addColorStop(.5,'#980D14');tg.addColorStop(1,'#7E0B10');
+  rr(tx,ty,tw,th,26);x.fillStyle=tg;x.fill();
+  x.strokeStyle='#FFD873';x.lineWidth=4;rr(tx,ty,tw,th,26);x.stroke();
+  x.strokeStyle='rgba(255,216,115,.45)';x.lineWidth=1.5;rr(tx+8,ty+8,tw-16,th-16,20);x.stroke();
+  x.textAlign='center';x.textBaseline='middle';
+  x.font='bold 30px "Microsoft YaHei"';
+  x.shadowColor='#4E060A';x.shadowBlur=6;x.fillStyle='#FFE39A';
+  var lC=['单','户','总','激','励'],ls=44;
+  var lx=CX-(lC.length-1)*ls/2;
+  for(var i=0;i<lC.length;i++)x.fillText(lC[i],lx+i*ls,ty+38);
+  x.shadowBlur=0;
+  var numStr=fmt(d.total);
+  x.font='bold 88px "Arial Black","Arial","Microsoft YaHei"';
+  var w1=x.measureText(numStr).width;
+  x.font='bold 52px "Microsoft YaHei"';
+  var w2=x.measureText('元').width;
+  var gap=12,totalW=w1+gap+w2,s2=CX-totalW/2;
+  var ag=x.createLinearGradient(0,ty+66,0,ty+140);
+  ag.addColorStop(0,'#FFF6C9');ag.addColorStop(.5,'#FFD24A');ag.addColorStop(1,'#F0A81E');
+  x.lineJoin='round';x.textAlign='left';
+  x.font='bold 88px "Arial Black","Arial","Microsoft YaHei"';
+  x.strokeStyle='#6E0B0F';x.lineWidth=8;
+  x.strokeText(numStr,s2,ty+108);x.fillStyle=ag;x.fillText(numStr,s2,ty+108);
+  x.font='bold 52px "Microsoft YaHei"';
+  x.strokeText('元',s2+w1+gap,ty+112);x.fillStyle='#FFE39A';x.fillText('元',s2+w1+gap,ty+112);
+  x.textAlign='center';x.textBaseline='middle';
+  x.font='20px "Microsoft YaHei"';x.fillStyle='#FFD9A0';
+  x.fillText('＝ 套餐激励 ＋ 提值激励 ＋ 智屏激励 ＋ 全光激励',CX,ty+150);
+  sparkle(tx+34,ty+34,9,'#FFF6DC',.95);sparkle(tx+tw-34,ty+34,9,'#FFF6DC',.95);
+
+  /* === 3. 激励明细卡 === */
+  var dx=95,dy=452,dw=560,dh=352;
+  x.save();
+  x.shadowColor='rgba(60,4,8,.4)';x.shadowBlur=14;x.shadowOffsetY=5;
+  rr(dx,dy,dw,dh,26);x.restore();
+  var cg=x.createLinearGradient(0,dy,0,dy+dh);
+  cg.addColorStop(0,'#FFFDF4');cg.addColorStop(1,'#FBEFCE');
+  x.fillStyle=cg;x.fill();
+  x.strokeStyle='#E0BE72';x.lineWidth=2;rr(dx,dy,dw,dh,26);x.stroke();
+  x.strokeStyle='rgba(224,190,114,.5)';x.lineWidth=1;rr(dx+6,dy+6,dw-12,dh-12,20);x.stroke();
+  x.textAlign='center';x.textBaseline='middle';
+  x.font='bold 27px "Microsoft YaHei"';x.fillStyle='#A8691C';
+  x.fillText('★ 激 励 明 细 ★',CX,dy+42);
+  var rows=[
+    {l:'套餐激励',v:fmt(d.a),n:'套餐价值 '+fmt(d.tc)+' × 0.5',off:false},
+    {l:'提值激励',v:fmt(d.b),n:'提值 '+fmt(d.tz)+' 元 × 5',off:false},
+    {l:'智屏激励',v:fmt(d.c3),n:st.zp?'已办理智屏 +100 元':'未办理智屏',off:!st.zp},
+    {l:'全光激励',v:fmt(d.c4),n:st.qg?'已办理全光 +50 元':'未办理全光',off:!st.qg}
+  ];
+  var ry0=dy+96,rs=64;
+  rows.forEach(function(r,i){
+    var yy=ry0+i*rs;
+    x.textAlign='left';
+    x.font='bold 30px "Microsoft YaHei"';x.fillStyle='#8A4B1F';
+    x.fillText(r.l,dx+46,yy);
+    x.textAlign='right';
+    x.font='bold 44px "Arial Black","Arial","Microsoft YaHei"';
+    x.fillStyle=r.off?'#C9A15E':'#C81E1E';
+    x.fillText(r.v+' 元',dx+dw-46,yy-3);
+    x.font='17px "Microsoft YaHei"';x.fillStyle='#B08850';
+    x.fillText(r.n,dx+dw-46,yy+25);
+    if(i<rows.length-1){
+      x.setLineDash([2,7]);
+      x.strokeStyle='#E0C48C';x.lineWidth=1.6;
+      x.beginPath();x.moveTo(dx+46,yy+rs-14);x.lineTo(dx+dw-46,yy+rs-14);x.stroke();
+      x.setLineDash([]);
+    }
+  });
+
+  /* === 4. 发展人 === */
+  var py=838,pw2=380,ph=58,pxn=CX-pw2/2;
+  rr(pxn-4,py+4,pw2,ph,16);x.fillStyle='rgba(60,4,8,.5)';x.fill();
+  var pg=x.createLinearGradient(pxn,0,pxn+pw2,0);
+  pg.addColorStop(0,'#8E0E14');pg.addColorStop(.5,'#D3242E');pg.addColorStop(1,'#8E0E14');
+  rr(pxn,py,pw2,ph,16);x.fillStyle=pg;x.fill();
+  x.strokeStyle='rgba(255,216,115,.75)';x.lineWidth=2;rr(pxn,py,pw2,ph,16);x.stroke();
+  star5(pxn+44,py+29,17,'#FFD24A');star5(pxn+pw2-44,py+29,17,'#FFD24A');
+  x.textAlign='center';x.textBaseline='middle';
+  x.font='bold 34px "Microsoft YaHei"';x.fillStyle='#FFE08A';
+  var nC=['发','展','人'],ns=68;
+  var nx2=CX-(nC.length-1)*ns/2;
+  for(var i=0;i<nC.length;i++)x.fillText(nC[i],nx2+i*ns,py+30);
+  var ny=912,nw2=380,nh=66,nyx=CX-nw2/2;
+  x.save();
+  x.shadowColor='rgba(60,4,8,.35)';x.shadowBlur=10;x.shadowOffsetY=4;
+  var ng=x.createLinearGradient(0,ny,0,ny+nh);
+  ng.addColorStop(0,'#FFFDF4');ng.addColorStop(1,'#FBF3DA');
+  rr(nyx,ny,nw2,nh,14);x.fillStyle=ng;x.fill();x.restore();
+  x.strokeStyle='#E0BE72';x.lineWidth=2;rr(nyx,ny,nw2,nh,14);x.stroke();
+  x.textAlign='center';x.textBaseline='middle';
+  x.font='bold 46px "Microsoft YaHei"';x.fillStyle='#C81E1E';
+  x.fillText(cp,CX,ny+35);
+
+  /* === 5. 底部口号 === */
+  x.textAlign='center';x.textBaseline='middle';
+  x.font='bold 44px "STKaiti","华文隶书","LiSu","KaiTi","Microsoft YaHei"';
+  x.shadowColor='#4E060A';x.shadowBlur=8;
+  x.fillStyle='#FFE9C8';x.fillText('多发展一户',CX-126,1030);
+  x.fillStyle='#FFD24A';x.fillText('收益多一分',CX+126,1030);
+  x.shadowBlur=0;
+  x.font='22px "Microsoft YaHei"';x.fillStyle='#FFD9A0';
+  x.fillText('天 天 开 单 · 月 月 增 收',CX,1088);
+  star5(CX-262,1030,9,'#FFD24A');star5(CX+262,1030,9,'#FFD24A');
+}
+
+window.saveImg=function(){draw();var u=c.toDataURL('image/jpeg',0.92);showPreview(u)};
+function showPreview(u){
+  var o=document.createElement('div');o.className='mask';
+  var i=document.createElement('img');i.src=u;
+  var s=document.createElement('div');s.className='sav';s.textContent='长按上方图片保存到手机';
+  var cl=document.createElement('div');cl.className='close';cl.textContent='关 闭';
+  cl.onclick=function(){document.body.removeChild(o)};
+  o.appendChild(i);o.appendChild(s);o.appendChild(cl);document.body.appendChild(o);
+}
+window.reset=function(){
+  document.getElementById('i_tc').value='139';
+  document.getElementById('i_tz').value='30';
+  document.getElementById('i_cp').value='王强';
+  st.zp=true;st.qg=true;
+  document.getElementById('i_zp').classList.add('on');
+  document.getElementById('i_qg').classList.add('on');
+  draw();updateLive();
+};
+['i_tc','i_tz','i_cp'].forEach(function(id){document.getElementById(id).addEventListener('input',function(){draw();updateLive();})});
+draw();updateLive();
+</script>
+</body>
+</html>
